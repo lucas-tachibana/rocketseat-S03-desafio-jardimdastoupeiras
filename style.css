@@ -1,0 +1,95 @@
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.background {
+  max-height: 100vh;
+  max-width: 100vw;
+  background-image: url('assets/fundo.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.board {
+  max-width: 70vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5.4rem;
+  margin-top: 5%;
+}
+
+.board .hole {
+  width: 22rem;
+  height: 16rem;
+  background: url("assets/toupeira6.svg") no-repeat;
+  background-size: contain;
+}
+
+.board .with-mole-first {
+  animation: moleanimation 1s forwards ;
+}
+
+.board .with-mole-second {
+  animation: moleanimation 1s .6s forwards ;
+}
+
+.board .with-mole-third {
+  animation: moleanimation 1s 2s forwards ;
+}
+
+.board .with-mole-fourth {
+  animation: moleanimation 1s 2.4s forwards ;
+}
+
+.board .with-mole-fifth {
+  animation: moleanimation 1s 2.6s forwards ;
+}
+
+.board .with-mole-first {
+  animation: moleanimation 1s 3s forwards ;
+}
+
+@keyframes moleanimation {
+  0% {
+    background-image: url("assets/toupeira6.svg")
+  }
+  
+  10% {
+    background-image: url("assets/toupeira1.svg")
+  }
+  
+  15% {
+    background-image: url("assets/toupeira2.svg")
+  }
+  
+  20% {
+    background-image: url("assets/toupeira3.svg")
+  }
+  
+  85% {
+    background-image: url("assets/toupeira3.svg")
+  }
+  
+  90% {
+    background-image: url("assets/toupeira4.svg")
+  }
+  
+  95% {
+    background-image: url("assets/toupeira5.svg")
+  }
+  
+  100% {
+    background-image: url("assets/toupeira6.svg")
+  }
+}
